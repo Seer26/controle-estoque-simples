@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de Estoque Simples</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Controle de Estoque</h1>
+
+    <section id="cadastro">
+        <h2>Cadastro de Produto</h2>
+        <input type="text" id="nome" placeholder="Nome do produto">
+        <input type="text" id="codigo" placeholder="Código do produto">
+        <input type="number" id="quantidade" placeholder="Quantidade inicial">
+        <input type="number" id="minimo" placeholder="Estoque mínimo">
+        <button onclick="cadastrarProduto()">Cadastrar</button>
+    </section>
+
+    <section id="movimentacao">
+        <h2>Entrada/Saída de Produto</h2>
+        <input type="text" id="codigoMov" placeholder="Código do produto">
+        <input type="number" id="quantidadeMov" placeholder="Quantidade">
+        <button onclick="entradaProduto()">Entrada</button>
+        <button onclick="saidaProduto()">Saída</button>
+    </section>
+
+    <section id="relatorio">
+        <h2>Relatório de Estoque</h2>
+        <button onclick="mostrarRelatorio()">Atualizar Relatório</button>
+        <div id="listaProdutos"></div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
